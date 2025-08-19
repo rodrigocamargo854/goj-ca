@@ -25,12 +25,12 @@ export default function Countdown() {
   }, [])
 
   return (
-   <div className="text-center p-6 bg-black text-white rounded-lg shadow-lg">
+   <div className="text-center p-6 bg-sky-400 text-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-mono-pixel mb-3">Canonização</h2>
       <p className="text-5xl font-mono-pixel tracking-wider text-red-500">
         {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
       </p>
-      <p className="text-sm font-mono-pixel mt-3 text-blue-400">
+      <p className="text-sm font-mono-pixel mt-3 text-green-400-400">
         até 07 de Setembro de 2025
       </p>
     </div>
