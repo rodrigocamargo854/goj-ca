@@ -10,6 +10,7 @@ import PixelIcon from "@/components/pixel-icon"
 import DarkModeToggle from "@/components/dark-mode-toggle"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Countdown from "@/components/Countdown"
 
 export default function AboutUsPage() {
   const [formData, setFormData] = useState({
@@ -28,16 +29,16 @@ export default function AboutUsPage() {
 
   const agenda = [
     {
-      date: "Sábado, 24 de Agosto",
+      date: "Sábado, 30 de Agosto",
       time: "16:00",
-      location: "Sala Pastoral",
+      location: "Igreja Santa Luzia",
       address: "Igreja Santa Luzia | Garcia ,  Blumenau/SC",
     },
 
     {
       date: " ",
       time: "16:00",
-      location: "Sala Pastoral",
+      location: "Igreja Santa Luzia",
       address: "Igreja Santa Luzia | Garcia ,  Blumenau/SC",
     },
   ]
@@ -104,17 +105,16 @@ export default function AboutUsPage() {
       <section id="hero" className="min-h-[75vh] flex items-center justify-center pixel-pattern relative pt-24 md:pt-28 px-4">
         <div className="text-center space-y-6 w-full max-w-2xl">
           <div className="flex justify-center mb-2">
-            <PixelIcon type="halo" size={48} className="text-secondary" />
+            <PixelIcon type="halo" size={60} className="text-secondary" />
           </div>
+                <Countdown />
           <h1 className="font-pixel text-xl sm:text-2xl lg:text-3xl leading-relaxed">
-            SOBRE NÓS
+            GOJ  CARLO ACUTIS
           </h1>
-          <p className="font-mono-pixel text-sm sm:text-base">
-            Holiness in the ordinary, a heart in the Eucharist
+          <p className="font-mono-pixel text-xl sm:text-base">
+            Santidade no ordinário, um coração na Eucaristia.
           </p>
-          <PixelButton size="lg" onClick={() => scrollToSection("agenda")} className="focus:ring-2 focus:ring-accent">
-            Próximo Encontro
-          </PixelButton>
+          
         </div>
       </section>
 
@@ -296,16 +296,24 @@ export default function AboutUsPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="font-pixel text-lg sm:text-xl md:text-2xl mb-10">CONTATO</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <PixelCard>
-              <h3 className="font-mono-pixel font-bold mb-4">WhatsApp</h3>
-              <p className="font-mono-pixel text-sm mb-4">+55 47 9 0000-0000</p>
-              <PixelButton variant="outline" className="focus:ring-2 focus:ring-accent">Enviar Mensagem</PixelButton>
-            </PixelCard>
-            <PixelCard>
-              <h3 className="font-mono-pixel font-bold mb-4">Email</h3>
-              <p className="font-mono-pixel text-sm mb-4">grupocarlo@paroquia.org</p>
-              <PixelButton variant="outline" className="focus:ring-2 focus:ring-accent">Enviar Email</PixelButton>
-            </PixelCard>
+            <div className="flex flex-col sm:flex-row gap-6">
+  <PixelCard className="flex-1">
+    <h3 className="font-mono-pixel font-bold mb-4">WhatsApp</h3>
+    <p className="font-mono-pixel text-sm mb-4">+55 47 9 0000-0000</p>
+    <PixelButton variant="outline" className="focus:ring-2 focus:ring-accent">
+      Enviar Mensagem
+    </PixelButton>
+  </PixelCard>
+
+  <PixelCard className="flex-1">
+    <h3 className="font-mono-pixel font-bold mb-4">Email</h3>
+    <p className="font-mono-pixel text-sm mb-4">grupocarlo@paroquia.org</p>
+    <PixelButton variant="outline" className="focus:ring-2 focus:ring-accent">
+      Enviar Email
+    </PixelButton>
+  </PixelCard>
+</div>
+
           </div>
           <div className="mt-8">
             <p className="font-mono-pixel text-sm">
